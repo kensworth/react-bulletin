@@ -1,4 +1,4 @@
-var Board = React.createClass({displayName: "Board",
+var Board = React.createClass({
     propTypes: {
         count: function(props, propName) {
             if (typeof props[propName] !== "number"){
@@ -18,7 +18,6 @@ var Board = React.createClass({displayName: "Board",
         this.uniqueId = this.uniqueId || 0;
         return this.uniqueId++;
     },
-  
     add: function(text) {
         var arr = this.state.notes;
         arr.push({
@@ -39,19 +38,19 @@ var Board = React.createClass({displayName: "Board",
     },
     eachNote: function(note, i) {
         return (
-                React.createElement(Note, {key: note.id, 
-                    index: i, 
-                    onChange: this.update, 
-                    onRemove: this.remove
-                }, note.note)
+                <Note key={note.id}
+                    index={i}
+                    onChange={this.update}
+                    onRemove={this.remove}
+                >{note.note}</Note>
             );
     },
     render: function() {
-        return (React.createElement("div", {className: "board"}, 
-                    this.state.notes.map(this.eachNote), 
-                    React.createElement("button", {className: "btn btn-sm btn-success glyphicon glyphicon-plus", 
-                            onClick: this.add.bind(null, "New Note")})
-            )
+        return (<div className="board">
+                    {this.state.notes.map(this.eachNote)}
+                    <button className="btn btn-sm btn-success glyphicon glyphicon-plus"
+                            onClick={this.add.bind(null, "New Note")}/>
+            </div>
 
         );
     }

@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
-
 body,
 html,
 div.board,
@@ -14,23 +12,24 @@ body {
 }
 
 div.board {
-    background-color: brown;
+    background-color: white;
     width: 100%;
-    background: #eab92d;
+    /*background: #eab92d;
     background: -moz-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(57%, #eab92d), color-stop(99%, #c79810));
     background: -webkit-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
     background: -o-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
     background: -ms-radial-gradient(center, ellipse cover, #eab92d 57%, #c79810 99%);
     background: radial-gradient(ellipse at center, #eab92d 57%, #c79810 99%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eab92d', endColorstr='#c79810', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eab92d', endColorstr='#c79810', GradientType=1);*/
 
 }
 
 div.note {
     height: 150px;
     width: 150px;
-    background-color: yellow;
+    border-radius: 50%;
+    background-color: gray;
     margin: 2px 0;
     position: absolute;
     cursor: -webkit-grab;
